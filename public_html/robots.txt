@@ -1,0 +1,22 @@
+# Bloquear a todos los robots de búsqueda
+User-agent: *
+Disallow: /
+
+# Bloquear específicamente a Googlebot para que respete tus metatags
+User-agent: Googlebot
+Disallow: /
+
+# Bloquear herramientas de clonación (Copy Web, HTTrack, etc.)
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+# Evitar que se guarden miniaturas o imágenes en Google Imágenes
+User-agent: Googlebot-Image
+Disallow: /
+

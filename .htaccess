@@ -1,0 +1,4 @@
+<Files claves.json>
+    Order Allow,Deny
+    Deny from all
+</Files>

